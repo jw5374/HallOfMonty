@@ -59,6 +59,29 @@ footer {
     inset: 0;
     aspect-ratio: 4 / 3;
     width: 10em;
+    border-radius: 0.75em;
+    border: none;
+    transform: translate(1%, -10%);
+    background-color: rgb(214, 214, 214);
+    box-shadow: 
+        -4px 15px 15px rgb(0, 71, 70);
+    transition: 75ms ease-in-out;
+    cursor: pointer;
+}
+
+#start-button:active {
+    transform: translate(0, 0);
+    box-shadow: none;
+}
+
+.button-outline {
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    aspect-ratio: 4 / 3;
+    width: 9.125em;
+    border-radius: 0.75em;
+    border: 0.25em solid darkslategray;
 }
 
 .linkstyle {

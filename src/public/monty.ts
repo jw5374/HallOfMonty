@@ -83,5 +83,5 @@ replayButton?.addEventListener('click', () => {
 
 startButton?.addEventListener('click', () => {
     mainWindow?.classList.remove('hide')
-    startButton.classList.add('hide')
+    startButton.parentElement!.classList.add('hide')
 })
