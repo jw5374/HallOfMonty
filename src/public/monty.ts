@@ -1,8 +1,11 @@
+const mainWindow = document.querySelector('main')
 const doorContainer = document.getElementById('hall-container')
 const doors: HTMLCollectionOf<Element> = document.getElementsByClassName('door')
 const message = document.getElementById('message')
 const replayButton = document.getElementById('replay-button')
+const startButton = document.getElementById('start-button')
 
+let doorAudio: HTMLAudioElement[] = []
 let clicked: Number = 0
 let doorNum: Number
 let doorClicked: number
@@ -23,6 +26,15 @@ function resetGame(): void {
 }
 
 for(let door of doors) {
+    let doorSound: HTMLAudioElement = new Audio("assets/321085__benjaminnelan__open-door-2.wav")
+    doorSound.volume = 0.35
+    doorAudio.push(doorSound)
+    door.addEventListener('mouseover', (e: Event) => {
+        let tar = e.target as HTMLElement
+        let num: number = parseInt(tar.dataset.doornum!)
+        doorAudio[num].play()
+    })
+
     door.addEventListener('click', (e: Event) => {
         if(doorClicked != undefined) {
             doors[doorClicked].parentElement?.classList.remove('outline') 
@@ -67,4 +79,9 @@ for(let door of doors) {
 
 replayButton?.addEventListener('click', () => {
     resetGame();
+})
+
+startButton?.addEventListener('click', () => {
+    mainWindow?.classList.remove('hide')
+    startButton.classList.add('hide')
 })

@@ -53,6 +53,14 @@ footer {
     align-self: center;
 }
 
+#start-button {
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    aspect-ratio: 4 / 3;
+    width: 10em;
+}
+
 .linkstyle {
     text-decoration: none;
     color: rgb(80, 80, 80);
