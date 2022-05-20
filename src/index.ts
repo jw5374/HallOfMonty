@@ -9,7 +9,7 @@ const app: Application = express()
 app.use(helmet())
 app.use(express.text())
 
-app.use('/', express.static('src/public', { extensions: ["html", "htm"] }))
+app.use('/', express.static('dist/public', { extensions: ["html", "htm"] }))
 app.use('/hiscore', score)
 
 // error handlers (using next(error) to pass on errors)

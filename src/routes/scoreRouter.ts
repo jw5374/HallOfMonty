@@ -5,7 +5,7 @@ const scoreRouter: Router = express.Router()
 
 scoreRouter.get('/', (req: Request, res: Response, next: NextFunction) => {
     try {
-        fs.readFile("src/data/hiscore.txt", { encoding: "utf-8" }, (err, data) => {
+        fs.readFile("dist/data/hiscore.txt", { encoding: "utf-8" }, (err, data) => {
             if(err) throw err
             res.send(data)
         })
@@ -16,7 +16,7 @@ scoreRouter.get('/', (req: Request, res: Response, next: NextFunction) => {
 
 scoreRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
     try {
-        fs.writeFile("src/data/hiscore.txt", req.body, (err) => {
+        fs.writeFile("dist/data/hiscore.txt", req.body, (err) => {
             if(err) throw err
         })
         res.sendStatus(200)

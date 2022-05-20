@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    user-select: none !important;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 1em;
+    text-align: center;
+    background-color: rgb(0, 23, 26);
+}
+
+#hall-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#hall-doors {
+    width: max-content;
+    align-self: center;
+}
+
+.linkstyle {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    transition: 0.25s ease-in-out;
+}
+
+.linkstyle:hover {
+    color: rgb(80, 80, 80);
+}
+
+.doorBehind {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1 / 1.75;
+    width: 90px;
+    margin-inline: 10px;
+    background-color: black;
+}
+
+.door {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.door.active {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
+}
+
+.doorOpened {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+.hide {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.outline {
+    outline: cyan dotted .25em;
+}
+
+@media only screen and (min-width: 30em) {
+    .doorBehind {
+        width: 150px;
+        margin-inline: 20px;
+    }
+}
+
+@media only screen and (min-width: 46em) {
+    .doorBehind {
+        width: 200px;
+        margin-inline: 50px;
+    }
+}
+
+@media (hover: hover) {
+    .door {
+        transition: all 0.25s ease-in-out;
+        transform-origin: left;
+    }
+    .door:hover {
+        /* Credit - https://codepen.io/am_eu */
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
+    }
+}
+
+@media (hover: none) {
+    .door {
+        transform-origin: left;
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
+    }
+}
