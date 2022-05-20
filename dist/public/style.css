@@ -1,3 +1,22 @@
+@media (hover: hover) {
+    .door {
+        transition: all 0.25s ease-in-out;
+        transform-origin: left;
+    }
+    .door:hover {
+        /* Credit - https://codepen.io/am_eu */
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
+    }
+}
+
+@media (hover: none) {
+    .door {
+        transform-origin: left;
+        transition: all 0.25s ease-in-out;
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
+    }
+}
+
 * {
     box-sizing: border-box;
     user-select: none !important;
@@ -90,23 +109,5 @@ footer {
     .doorBehind {
         width: 200px;
         margin-inline: 50px;
-    }
-}
-
-@media (hover: hover) {
-    .door {
-        transition: all 0.25s ease-in-out;
-        transform-origin: left;
-    }
-    .door:hover {
-        /* Credit - https://codepen.io/am_eu */
-        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
-    }
-}
-
-@media (hover: none) {
-    .door {
-        transform-origin: left;
-        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-45deg);
     }
 }
