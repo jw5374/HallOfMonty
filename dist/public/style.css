@@ -49,8 +49,9 @@ footer {
 figure {
     background-color: rgb(60, 60, 60);
     color: rgb(130, 130, 130);
-    padding: 0.5em;
     border-radius: 1em;
+    margin: 0.25em;
+    padding: 0.25em; 
 }
 
 #hall-container {
@@ -65,12 +66,12 @@ figure {
 
 #explanation {
     color: black;
-    font-size: larger;
+    font-size: small;
     overflow-y: auto;
     text-align: left;
     margin: 1em auto 5em;
     border-radius: 0.5em;
-    padding: 1em;
+    padding: 0.15em;
     width: 75vw;
     height: 30em;
     background-color: rgb(100, 100, 100);
@@ -162,6 +163,15 @@ figure {
 }
 
 @media only screen and (min-width: 30em) {
+    figure {
+        padding: 0.5em;
+    }
+
+    #explanation {
+        font-size: medium;
+        padding: 0.75em;
+    }
+
     .doorBehind {
         width: 150px;
         margin-inline: 20px;
@@ -169,6 +179,15 @@ figure {
 }
 
 @media only screen and (min-width: 46em) {
+    figure {
+        padding: 0.5em;
+    }
+
+    #explanation {
+        font-size: larger;
+        padding: 1em;
+    }
+
     .doorBehind {
         width: 200px;
         margin-inline: 50px;
