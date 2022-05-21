@@ -24,7 +24,71 @@
         </div>
         <button id="replay-button" class="hide">Replay</button>
         <div id="explanation">
-
+            <section>
+                <h1>The Monty Hall Problem</h1>
+                <p><em>Disclaimer: incomplete or not exhaustively accurate explanation ahead as I am far from an expert</em></p>
+                <hr>
+                <h3>The problem statement</h3>
+                <p>
+                    Suppose you're on a game show. You have the option of choosing one of 3 doors. Behind these doors lies 2 goats and a brand new car (or spectacular prize of some sort). You decide to pick door number 1. The host then reveals a door which the prize is not behind, suppose it's door number 3. You then have the opportunity to switch your original choice (i.e. you may choose to switch your choice to door number 2). Is it in your interest to do so? Does it matter?
+                </p>
+                <hr>
+                <h3>The layman's explanation</h3>
+                <p>
+                    When looking at the first choice, every door has the same probability of containing the prize (1/3). You have no information about the state of the game, thus everything is fair game. However after the host reveals a door, new information has been introduced.
+                    There are 3 stipulations:
+                    <ol>
+                        <li>The host must always open a door that was not picked by the contestant.</li>
+                        <li>The host must always open a door to reveal a goat and never the car.</li>
+                        <li>The host must always offer the chance to switch between the originally chosen door and the remaining closed door.</li>
+                    </ol>
+                    Since one door has been eliminated as a possible option for the car, the door remaining then represents the rest of the probability for the car (2/3). In other words, there's simply a much higher chance that your initial choice was wrong (2/3 chance of being wrong), as opposed to being right (1/3 chance of being right). Thus, it should be in your best interest to switch doors as it's simply betting on the fact that you were wrong the first time.
+                </p>
+                <hr>
+                <p>
+                    Looking at it further, suppose the door picked (number 1) had a goat, and the host opens door 3. This means that the car is necessarily behind door 2, and the host was forced to open door 3 as it's the only door left that he can choose. The probability of such a case where you pick door 1 and the host picks door 3 is 1 * (1/3) (i.e. 100% chance that the host picks 3 and 1/3 chance that you pick 1).
+                    <br>
+                    However if door 1 had the car, then the resulting chance that you pick door 1, and the host picks door 3 is (1/3) * (1/2) (i.e. the host has free reign over which of the 2 doors he can pick).
+                    <br>
+                    Thus, the probability that under these conditions the car is behind door 2 is (1/3) while the probability that the car is behind door 1 is (1/6). It's twice as likely that the car is not behind door 1.
+                </p>
+                <p>
+                    An even more intuitive way to see the reason why switching makes sense is to expand the game to 1 million doors. Suppose you decide to pick door 1 again. The host then opens 999,998 of the remaining doors leaving door 2 again closed. Would you switch? The question once again ends up being, what are the chances that you happened to pick the door with the car on your first try? And now that you know that 999,998 of the other doors are not the prize, what is the chance that the remaining door might be the prize?
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h1>More details</h1>
+                <hr>
+                <p><strong>A more detailed explanation (and where the above information was obtained, and further information below) can be found <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">here</a> at our trusty online encyclopedia.</strong></p>
+                <hr>
+                <h3>Background</h3>
+                <p>
+                    Originally posed by Steve Selvin to the <em>American Statistician</em> in 1975, the problem gained notoriety through a letter from Craig F. Whitaker to Marilyn vos Savant's magazine column in <em>Parade</em>.
+                </p>
+                <p>
+                    Following the publication and vos Savant's answer to switch, many readers criticized what seemed to be a nonsensical answer. The solution is counterintuitive, such that even amongst PhD readers, many wrote in, berating the answer
+                    <figure>
+                        <blockquote>
+                            <p>"You blew it, and you blew it big! Since you seem to have difficulty grasping the basic principle at work here, I'll explain. After the host reveals a goat, you now have a one-in-two chance of being correct. Whether you change your selection or not, the odds are the same. There is enough mathematical illiteracy in this country, and we don't need the world's highest IQ propagating more. Shame!"</p>
+                        </blockquote>
+                        <figcaption>
+                            - Scott Smith, 
+                            <cite>Ph.D. University of Florida</cite>
+                        </figcaption>
+                    </figure>
+                </p>
+                <hr>
+                <h3>Explanations for Opposition</h3>
+                <p>
+                    From the field of cognitive psychology, 3 potential explanations may arise (amongst many I'm sure)
+                    <ol>
+                        <li>The <strong><em>endowment effect</em></strong>, in which people tend to overvalue the winning probability of the already chosen - already "owned" - door.</li>
+                        <li>The <strong><em>status quo bias</em></strong>, in which people prefer to stick with the choice of door they have already made.</li>
+                        <li>The <strong><em>errors of omission vs. errors of commission effect</em></strong>, in which, all other things being equal, people prefer to make errors through inaction (Stay) as opposed to action (Switch).</li>
+                    </ol>
+                </p>
+            </section>
         </div>
     </main>
     <footer>

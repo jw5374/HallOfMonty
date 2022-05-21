@@ -68,7 +68,7 @@ for(let door of doors) {
                 targetEl.parentElement!.classList.add('prize-door')
                 win.textContent = "You Win a Prize!"
             } else {
-                win.textContent = "You didn't win anything :("
+                win.textContent = "Congratulations on a goat!"
             }
             doorContainer?.appendChild(win)
             doorContainer?.classList.add('disable')
