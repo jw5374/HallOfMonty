@@ -152,7 +152,6 @@
                         statArray[5]++
                     }
                     win.textContent = "Congratulations on a goat!"
-                    statArray[9] = winstreak.get()
                 }
                 statArray[1] = statArray[5] + statArray[3]
                 statArray[2] = statArray[6] + statArray[4]
@@ -169,6 +168,7 @@
     }
 
     replayButton?.addEventListener('click', () => {
+        stats![9].textContent = winstreak.get().toString()
         resetGame();
     })
 
