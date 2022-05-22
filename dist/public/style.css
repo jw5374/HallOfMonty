@@ -47,9 +47,10 @@ footer {
 }
 
 table {
+    display: none;
     margin: 1em auto 1em;
     background-color: rgb(90, 90, 90);
-    width: 65%;
+    width: 75%;
 }
 
 table thead {
@@ -119,6 +120,10 @@ figure {
     padding-inline: 1em;
 }
 
+.mobile-exp {
+    display: block;
+}
+
 .button-outline {
     margin: auto;
     position: absolute;
@@ -184,6 +189,10 @@ figure {
 }
 
 @media only screen and (min-width: 30em) {
+    table {
+        display: none;
+    }
+
     figure {
         padding: 0.5em;
     }
@@ -193,6 +202,10 @@ figure {
         padding: 0.75em;
     }
 
+    .mobile-exp {
+        display: block;
+    }
+
     .doorBehind {
         width: 150px;
         margin-inline: 20px;
@@ -200,6 +213,10 @@ figure {
 }
 
 @media only screen and (min-width: 46em) {
+    table {
+        display: table;
+    }
+    
     figure {
         padding: 0.5em;
     }
@@ -207,6 +224,10 @@ figure {
     #explanation {
         font-size: larger;
         padding: 1em;
+    }
+
+    .mobile-exp {
+        display: none;
     }
 
     .doorBehind {
